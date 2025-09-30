@@ -50,6 +50,63 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+/* =========================
+   SLIDERS-TEXT
+   ========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("text-carousel");
+  let items, itemWidth, totalWidth, halfWidth, buffer;
+  let offset = 0;
+  let speed = 1; // швидкість руху (px/frame)
+
+  function recalc() {
+    items = carousel.querySelectorAll(".item-text");
+    if (items.length === 0) return;
+
+    itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+
+    totalWidth = Array.from(items).reduce(
+      (acc, el) => acc + el.offsetWidth + parseInt(getComputedStyle(el).marginRight),
+      0
+    );
+
+    const screenWidth = window.innerWidth;
+    const minWidth = screenWidth * 3;
+
+    while (carousel.scrollWidth < minWidth) {
+      items.forEach(el => carousel.appendChild(el.cloneNode(true)));
+    }
+
+    halfWidth = carousel.scrollWidth / 2;
+    buffer = itemWidth;
+  }
+
+  function animate() {
+    offset -= speed;
+
+    if (offset <= -halfWidth - buffer) {
+      offset += halfWidth;
+    }
+    if (offset > buffer) {
+      offset -= halfWidth;
+    }
+
+    carousel.style.transform = `translateX(${offset}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  recalc();
+  animate();
+
+  window.addEventListener("resize", () => {
+    offset = 0;
+    recalc();
+  });
+});
+
+
+
 /* =========================
    POPUP
    ========================= */
@@ -80,7 +137,6 @@ window.addEventListener('click', (e) => {
     popup.style.display = 'none';
   }
 });
-
 
 
 /* =========================
@@ -129,4 +185,5 @@ const filterBtns = document.querySelectorAll('.filter-btns .btn');
   });
 
   applyFilter('all');
+  
   
