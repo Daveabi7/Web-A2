@@ -4,11 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ЦСО "А" СБУ</title>
-    <link rel="icon" type="image/png" href="img/Background/SBU-Alfa.webp">
+    <link rel="icon" type="img/png" href="img/Background/SBU-Alfa.webp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?v=1" rel="stylesheet">
   </head>
   <body>
+
+    <audio id="bg" loop>
+      <source src="audio/" type="audio/mpeg">
+    </audio>
+
+    <script>
+    const audio = document.getElementById('bg');
+
+    function startOnce() {
+      audio.play().catch(e => console.log('play error', e));
+      window.removeEventListener('click', startOnce);
+      window.removeEventListener('touchstart', startOnce);
+      window.removeEventListener('keydown', startOnce);
+    }
+
+    window.addEventListener('click', startOnce, { once: true });
+    window.addEventListener('touchstart', startOnce, { once: true });
+    window.addEventListener('keydown', startOnce, { once: true });
+    </script>
 
     <section class="hero position-relative text-white">
       <div class="container text-center">
@@ -37,8 +56,7 @@
                   та комфортними умовами.
                 </p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNXBzvOe9g69ic2AB_0EZRisXZSxY73G9AvgeJME5SPaFNjQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacNP0KKUC4lkQdKQxqBLTZrQL40HsytYrwFPuE84q1Hwtq1E6a5B58p5ufFSQ_aem_EJQacrg-OTtCWq_ZHC1hmA" target="_blank" 
-                  class="btn btn-yellow fw-bold text-uppercase text-Loos-ExtraWide rounded-0" 
-                  style="width: 250px; height: 50px; display: flex; align-items: center; justify-content: center; text-align: center;">
+                  class="btn btn-yellow fw-bold text-uppercase text-Loos-ExtraWide rounded-0 button-join">
                   Приєднатись&nbsp;&nbsp;➤
                 </a>
               </div>
@@ -46,7 +64,7 @@
               <svg class="tech-item-bg" viewBox="0 0 100 70" preserveAspectRatio="none" aria-hidden="true" role="presentation">
                 <polygon points="0,0 100,0 100,58 88,70 0,70" fill="#000" />
                 <polygon points="0,0 100,0 100,58 88,70 0,70" 
-                        fill="none" stroke="#fff" stroke-width="1" 
+                        fill="none" stroke="#fff" stroke-width="0.7" 
                         stroke-linejoin="round" stroke-linecap="round"/>
               </svg>
             </div>
@@ -66,12 +84,11 @@
                     alt="Логотип СБУ" 
                     class="me-2" style="width:60px;">
                 <div class="text-start" style="font-size:0.9rem; line-height: 30px;">
-                  <p class="fw-bold mb-1 text-white text-Loos-ExtraWide" style="font-size: 23px;">
+                  <p class="fw-bold mb-1 text-white text-Loos-ExtraWide text-number">
                     ГАРЯЧА ЛІНІЯ
                   </p>
                   <a href="tel:+380674016605" 
-                    class="text-warning fw-bold text-decoration-none d-block text-Loos-Wide" 
-                    style="font-size: 26px; margin-top: -5px;">
+                    class="text-warning fw-bold text-decoration-none d-block text-Loos-Wide text-number">
                     +380&nbsp;67&nbsp;401&nbsp;66&nbsp;05
                   </a>
                 </div>
@@ -79,7 +96,7 @@
               <svg class="tech-item-bg" viewBox="0 0 100 70" preserveAspectRatio="none" aria-hidden="true" role="presentation">
                 <polygon points="0,0 100,0 100,58 88,70 0,70" fill="#000" />
                 <polygon points="0,0 100,0 100,58 88,70 0,70" 
-                        fill="none" stroke="#fff" stroke-width="1" 
+                        fill="none" stroke="#fff" stroke-width="0.7" 
                         stroke-linejoin="round" stroke-linecap="round"/>
               </svg>
             </div>
@@ -112,7 +129,7 @@
             <h3 class="fw-bold text-Loos-ExtraWide-big" style="font-size: 26px; -webkit-text-stroke: 2px;">НАШІ ЦІННОСТІ</h3>
           </div>
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
                   <img src="img/Icons/Патріотизм  і відданість Україні.png" alt="Патріотизм" style="width:80px; margin-bottom: 80px;">
@@ -126,10 +143,10 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
-                  <img src="img/Icons/Патріотизм  і відданість Україні (1).png" alt="Честь" style="width:80px; margin-bottom: 80px;">
+                  <img src="img/Icons/Патріотизм  і відданість Україні (1).png" alt="Порядність" style="width:80px; margin-bottom: 80px;">
                 </div>
                 <h5 class="fw-bold text-Loos-ExtraWide" style="text-transform: uppercase; -webkit-text-stroke: 1px; letter-spacing: 2px;">Порядність</h5>
                 <p class="small text-Loos-Wide">Ми чесні перед собою та іншими. Ми гідні довіри, спираємося на 
@@ -139,10 +156,10 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
-                  <img src="img/Icons/Патріотизм  і відданість Україні (2).png" alt="Рішучість" style="width:80px; margin-bottom: 80px;">
+                  <img src="img/Icons/Патріотизм  і відданість Україні (2).png" alt="Лідерство" style="width:80px; margin-bottom: 80px;">
                 </div>
                 <h5 class="fw-bold text-Loos-ExtraWide" style="text-transform: uppercase; -webkit-text-stroke: 1px; letter-spacing: 2px;">Лідерство</h5>
                 <p class="small text-Loos-Wide">Ми — лідери на всіх рівнях: вміємо не тільки керувати, а й надихаємо власним 
@@ -155,10 +172,10 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
-                  <img src="img/Icons/Патріотизм  і відданість Україні (5).png" alt="Відповідальність" style="width:80px; margin-bottom: 80px;">
+                  <img src="img/Icons/Патріотизм  і відданість Україні (5).png" alt="Братерство" style="width:80px; margin-bottom: 80px;">
                 </div>
                 <h5 class="fw-bold text-Loos-ExtraWide" style="text-transform: uppercase; -webkit-text-stroke: 1px; letter-spacing: 2px;">Братерство</h5>
                 <p class="small text-Loos-Wide">
@@ -170,10 +187,10 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
-                  <img src="img/Icons/Патріотизм  і відданість Україні (4).png" alt="Стійкість" style="width:80px; margin-bottom: 80px;">
+                  <img src="img/Icons/Патріотизм  і відданість Україні (4).png" alt="Таємність" style="width:80px; margin-bottom: 80px;">
                 </div>
                 <h5 class="fw-bold text-Loos-ExtraWide" style="text-transform: uppercase; -webkit-text-stroke: 1px; letter-spacing: 2px;">Таємність</h5>
                 <p class="small text-Loos-Wide">
@@ -187,10 +204,10 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="card h-100 shadow-sm border-0 text-start">
+            <div class="card h-100 shadow-sm border-0 text-start rounded-0">
               <div class="card-body">
                 <div class="mb-3">
-                  <img src="img/Icons/Патріотизм  і відданість Україні (3).png" alt="Братерство" style="width:80px; margin-bottom: 80px;">
+                  <img src="img/Icons/Патріотизм  і відданість Україні (3).png" alt="Пам’ять" style="width:80px; margin-bottom: 80px;">
                 </div>
                 <h5 class="fw-bold text-Loos-ExtraWide" style="text-transform: uppercase; -webkit-text-stroke: 1px; letter-spacing: 2px;">Пам’ять</h5>
                 <p class="small text-Loos-Wide">
@@ -208,6 +225,16 @@
     <section class="battle-path position-relative ">
       <div class="battle-wallpaper position-absolute top-0 start-0 w-100 h-100"
           style="background: url('img/Background/fon-screen.png') center/cover no-repeat;">
+      </div>
+      <div class="carousel-wrapper-text fullwidth-slider">
+        <div class="carousel-text" id="text-carousel">
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+          <div class="item-text text-Loos-Wide"><span>● НАШІ ОСТАННІ ОПЕРАЦІЇ</span></div>
+        </div>
       </div>
       <div class="container position-relative">
         <div class="row g-0 mb-5 battle-gallery">
@@ -522,6 +549,12 @@
           </div>
 
         <div id="carouselExampleAutoplaying1" class="carousel slide mt-5" data-bs-ride="carousel" style="margin-bottom: -48px;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="img/Slider 2/1_big_slider.jpg" class="d-block w-100" alt="1_big_slider">
@@ -537,15 +570,14 @@
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon-two" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon-two" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
     </section>
 
     <section class="commander-section py-5 position-relative">
@@ -559,38 +591,44 @@
             <p class="text-Loos-Wide">З початку повномасштабного вторгнення рф очолив групу, яка нищила колони техніки у ворожому тилу на території Чорнобильської області. Після звільнення Київщини наступні операції проводив в Рубіжному, Сіверську, Лисичанську, Сєвєродонецьку та інших населених пунктах на Донеччині.</p>
             <p class="text-Loos-Wide">Генерал-майор Євгеній Хмара призначений Начальником Центру спеціальних операцій «А» Указом Президента України №223 від 14 квітня 2023 року.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNXBzvOe9g69ic2AB_0EZRisXZSxY73G9AvgeJME5SPaFNjQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacNP0KKUC4lkQdKQxqBLTZrQL40HsytYrwFPuE84q1Hwtq1E6a5B58p5ufFSQ_aem_EJQacrg-OTtCWq_ZHC1hmA" target="_blank" 
-              class="btn btn-yellow fw-bold text-uppercase text-Loos-ExtraWide rounded-0 text-three" >
+              class="btn btn-black fw-bold text-uppercase text-Loos-ExtraWide rounded-0 text-three" >
               Приєднатись&nbsp;&nbsp;➤
             </a>
             </div>
           <div class="col-12 col-lg-4 offset-lg-1 d-flex flex-column">
             <div id="carouselExampleAutoplaying2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/Slider 3/1_хмара.jpg" class="d-block w-100 object-fit-cover" alt="...">
+                  <img src="img/Slider 3/1_хмара.jpg" class="d-block w-100 object-fit-cover" alt="1_хмар">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/Slider 3/2_хмара.jpg" class="d-block w-100 object-fit-cover" alt="...">
+                  <img src="img/Slider 3/2_хмара.jpg" class="d-block w-100 object-fit-cover" alt="2_хмар">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/Slider 3/3_хмара.jpg" class="d-block w-100 object-fit-cover" alt="...">
+                  <img src="img/Slider 3/3_хмара.jpg" class="d-block w-100 object-fit-cover" alt="3_хмар">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/Slider 3/4_хмара.jpg" class="d-block w-100 object-fit-cover" alt="...">
+                  <img src="img/Slider 3/4_хмара.jpg" class="d-block w-100 object-fit-cover" alt="4_хмар">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon-two" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon-two" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
           <div class="col-12 col-lg-3 d-flex flex-column clipped-card">
-            <div class="card bg-light border-0 mb-3">
+            <div class="card bg-light border-0 mb-3" style="position: relative; clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);">
               <div class="card-body">
                 <h4 class="fw-bold text-Loos-ExtraWide" style="-webkit-text-stroke: 1px;">НАГОРОДИ</h4>
                 <p class="mb-2 text-Loos-Wide">Нагороджений орденом Данила Галицького за особисті заслуги у зміцненні національної безпеки, мужність, високий професіоналізм та зразкове виконання службового обов'язку.</p>
@@ -642,9 +680,13 @@
           </div>
         </div>
 
-        <div class="row mb-5">
+        <div class="row">
           <div class="col-12 text-center">
-            <video class="w-100 rounded-3 shadow" playsinline muted controls loop>
+            <video class="w-100 rounded-0 shadow" 
+                  playsinline 
+                  controls 
+                  loop 
+                  poster="img/Background/preview-video.jpg">
               <source src="video/10 питань до наших рекрутерів： дізнайся все перед вступ.mp4" type="video/mp4">
             </video>
           </div>
@@ -653,14 +695,12 @@
 
     <section class="py-5">
       <div class="custom-container my-block">
-        <!-- Заголовок -->
         <h2 class="section-title text-Loos-ExtraWide-scale" style="margin-top: 50px;">Наші вакансії</h2>
 
-        <!-- Панель фільтрів -->
         <div class="d-flex flex-wrap justify-content-center filter-btns mb-4">
           <button class="btn btn-outline-light active text-Loos-ExtraWide" data-filter="all">Всі</button>
-          <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="viyskova">Військова</button>
-          <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="medychna">Медична</button>
+          <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="viyskova">Військові</button>
+          <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="medychna">Медичні</button>
           <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="inzhenerna">Інженерна</button>
           <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="analitychna">Аналітична</button>
           <button class="btn btn-outline-light text-Loos-ExtraWide" data-filter="gumanitarna">Гуманітарна</button>
@@ -670,7 +710,7 @@
 
         <!-- Військова -->
         <div class="category viyskova">
-          <h3 class="category-title text-Loos-ExtraWide-scale">Військова</h3>
+          <h3 class="category-title text-Loos-ExtraWide-scale">Військові</h3>
           <div class="accordion" id="accordionViyskova">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -964,7 +1004,7 @@
 
         <!-- Медична -->
         <div class="category medychna">
-          <h3 class="category-title text-Loos-ExtraWide-scale">Медична</h3>
+          <h3 class="category-title text-Loos-ExtraWide-scale">Медичні</h3>
           <div class="accordion" id="accordionMedychna">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -1099,7 +1139,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed text-Loos-ExtraWide-big-two" type="button" data-bs-toggle="collapse" data-bs-target="#emergency-medicine-physician">
-                  лікар з медицини невідкладних станів військово-медичної служби ЦСО "А" СБ України
+                  лікар з медицини невідкладних станів військово-медичної <br>служби ЦСО "А" СБ України
                 </button>
               </h2>
               <div id="emergency-medicine-physician" class="accordion-collapse collapse" data-bs-parent="#accordionMedychna">
@@ -2781,125 +2821,155 @@
         </div>
         </div>
         
-        <!-- Кнопка для розгортання/згортання -->
-        <button id="toggleMore" class="toggle-btn" style="margin-bottom: 50px;">Більше вакансій</button>
+        <button id="toggleMore" class="toggle-btn text-Loos-ExtraWide-big" style="margin-bottom: 50px;">Більше вакансій</button>
       </div>
     </section>
 
     <div id="popup" class="popup">
-      <div class="popup-container">
+      <div class="popup-container rounded-0">
         <span class="popup-close">✕</span>
         <div class="popup-bg">
-          <div class="popup-overlay"></div>
-          <div class="popup-content">
-            <h2 class="text-Loos-ExtraWide-big text-popup">СТАНЬ ЧАСТИНОЮ ЕЛІТИ<br>ВСТУПАЙ ДО ЦСО «А» СБУ</h2>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNXBzvOe9g69ic2AB_0EZRisXZSxY73G9AvgeJME5SPaFNjQ/viewform"
-                  target="_blank"
-                  class="btn btn-yellow fw-bold text-uppercase mt-auto text-Loos-ExtraWide text-button-popup">
-                  Приєднатись&nbsp;&nbsp;➤
-                </a></div>
+          <div class="popup-content container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="popup-textblock">
+                  <h2 class="text-popup">
+                    Місце де<br>операції<br>стають історією
+                  </h2>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNXBzvOe9g69ic2AB_0EZRisXZSxY73G9AvgeJME5SPaFNjQ/viewform"
+                    target="_blank"
+                    class="btn btn-yellow fw-bold text-uppercase rounded-0" style="display: flex; align-items: center; justify-content: center; text-align: center; font-size: 20px;">
+                    Приєднатись ➤
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
+          <img src="img/Background/qr-code.png" alt="QR code" class="popup-qr">
+        </div>
       </div>
     </div>
     
-    <section class="media-section py-5">
+    <section class="media-section py-5" style="background: url('img/Background/white-screen.png') center/cover no-repeat; z-index:-1;">
       <div class="container">
           <h2 class="media-title text-start mb-4 mb-md-5 text-Loos-ExtraWide-big" style="-webkit-text-stroke: 3px; letter-spacing: 4px;">ЦСО 'А' У МЕДІА</h2>
           <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#mediaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#mediaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              </div>
               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row g-4">
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 1.png" class="card-img-top" alt="Медіа 1">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span card-span">інтерв’ю</span>
-                                      <p class="card-p">СПЕЦПРИЗНАЧЕНЦІ СБУ: ІСТОРІЯ, КЛЮЧОВІ ОПЕРАЦІЇ, РЕКРУТИНГ • UKRAÏNER W</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 2.png" class="card-img-top" alt="Медіа 2">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-warning text-dark card-span">документальний фільм</span>
-                                      <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 3.png" class="card-img-top" alt="Медіа 3">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span">інтерв’ю</span>
-                                      <p class="card-p">ПОТРІБНЕ ОПТОВОЛОКНО НА 20+ КМ - ЄВГЕНІЙ ХМАРА, КЕРІВНИК ЦСО «А» СБУ ПУБЛІЧНЕ ІНТЕРВʼЮ</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 4.png" class="card-img-top" alt="Медіа 4">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span">інтерв’ю</span>
-                                      <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                <div class="carousel-item active">
+                  <div class="row g-4">
 
-                  <div class="carousel-item">
-                      <div class="row g-4">
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 1.png" class="card-img-top" alt="Медіа 1">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span">інтерв’ю</span>
-                                      <p class="card-p">СПЕЦПРИЗНАЧЕНЦІ СБУ: ІСТОРІЯ, КЛЮЧОВІ ОПЕРАЦІЇ, РЕКРУТИНГ • UKRAÏNER W</p>
-                                  </div>
-                              </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 1.png" class="card-img-top" alt="Медіа 1">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">СПЕЦПРИЗНАЧЕНЦІ СБУ: ІСТОРІЯ, КЛЮЧОВІ ОПЕРАЦІЇ, РЕКРУТИНГ • UKRAÏNER W</p>
                           </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 2.png" class="card-img-top" alt="Медіа 2">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-warning text-dark card-span">документальний фільм</span>
-                                      <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
-                                  </div>
-                              </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 2.png" class="card-img-top" alt="Медіа 2">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-warning text-dark card-span">документальний фільм</span>
+                            <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
                           </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 3.png" class="card-img-top" alt="Медіа 3">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span">інтерв’ю</span>
-                                      <p class="card-p">ПОТРІБНЕ ОПТОВОЛОКНО НА 20+ КМ - ЄВГЕНІЙ ХМАРА, КЕРІВНИК ЦСО «А» СБУ ПУБЛІЧНЕ ІНТЕРВʼЮ</p>
-                                  </div>
-                              </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 3.png" class="card-img-top" alt="Медіа 3">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">ПОТРІБНЕ ОПТОВОЛОКНО НА 20+ КМ - ЄВГЕНІЙ ХМАРА, КЕРІВНИК ЦСО «А» СБУ ПУБЛІЧНЕ ІНТЕРВʼЮ</p>
                           </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                              <div class="media-card h-100">
-                                  <img src="img/News/Rectangle 4.png" class="card-img-top" alt="Медіа 4">
-                                  <div class="card-body text-Loos-Wide">
-                                      <span class="tag bg-success card-span">інтерв’ю</span>
-                                      <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
-                                  </div>
-                              </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 4.png" class="card-img-top" alt="Медіа 4">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
                           </div>
-                      </div>
+                        </div>
+                      </a>
+                    </div>
+
                   </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row g-4">
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 1.png" class="card-img-top" alt="Медіа 1">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">СПЕЦПРИЗНАЧЕНЦІ СБУ: ІСТОРІЯ, КЛЮЧОВІ ОПЕРАЦІЇ, РЕКРУТИНГ • UKRAÏNER W</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 2.png" class="card-img-top" alt="Медіа 2">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-warning text-dark card-span">документальний фільм</span>
+                            <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 3.png" class="card-img-top" alt="Медіа 3">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">ПОТРІБНЕ ОПТОВОЛОКНО НА 20+ КМ - ЄВГЕНІЙ ХМАРА, КЕРІВНИК ЦСО «А» СБУ ПУБЛІЧНЕ ІНТЕРВʼЮ</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <a href="https://focus.ua/" class="text-decoration-none text-reset">
+                        <div class="media-card h-100">
+                          <img src="img/News/Rectangle 4.png" class="card-img-top" alt="Медіа 4">
+                          <div class="card-body text-Loos-Wide">
+                            <span class="tag bg-success card-span">інтерв’ю</span>
+                            <p class="card-p">ВОЇНИ ЦСО «А» СБУ: 5 СПАЛЕНИХ БМП ЗА РАЗ, РІДКІСНА РЕАКТИВНА СИСТЕМА ТА КОМАНДИРСЬКИЙ «КРУЗАК»</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
               </div>
 
               <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="carousel-control-prev-icon-two" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="carousel-control-next-icon-two" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
               </button>
           </div>
@@ -2909,12 +2979,12 @@
     <footer>
       <div class="container footer-container">
         <p>ГАРЯЧА ЛІНІЯ<br><a href="tel:+380674016605" class="number-phone">+380 67 401 66 05</a></p>
-        <p><a href="#">INSTAGRAM</a></p>
+        <p><a class="a-yellow" href="https://www.instagram.com/soc_a_team?igsh=MTQ0OGt4Z3JqdzR3NA==">INSTAGRAM</a></p>
         <p>© 2025 SOC «A»</p>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/core.js"></script>
+    <script src="js/core.js?v=1"></script>
   </body>
 </html>
